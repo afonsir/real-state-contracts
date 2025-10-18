@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Comando para criar o banco de dados
+```bash
+bin/rails db:create
+```
+* Comando para rodar migrações pendentes:
+```bash
+bin/rails db:migrate
+```
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Comando para subir o servidor
+```bash
+bin/rails server
+```
