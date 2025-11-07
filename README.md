@@ -31,3 +31,9 @@ bin/rails db:migrate:<up||down> VERSION=<timestamp>
 ```bash
 bin/rails db:migrate
 ```
+
+### Linting
+* Comando para rodar **rubocop**:
+```bash
+rubocop <filepath>
+```
