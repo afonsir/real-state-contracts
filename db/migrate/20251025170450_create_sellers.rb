@@ -4,8 +4,8 @@ class CreateSellers < ActiveRecord::Migration[7.2]
       t.string :name, null: false
       t.string :document_number, null: false, limit: 14
       t.string :kind, null: false, limit: 4
-      
-      t.timestamps  
+
+      t.timestamps
     end
   end
 end
