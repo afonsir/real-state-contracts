@@ -1,5 +1,35 @@
 # README
 
+### Docker
+* Comando para listar containers:
+```bash
+docker container ls --all
+```
+* Comando para parar containers:
+```bash
+docker container stop <container_name>
+```
+* Comando para remover containers:
+```bash
+docker container rm <container_name>
+```
+* Comando para remover todos containers parados:
+```bash
+docker container prune
+```
+* Comando para listar volumes:
+```bash
+docker volume ls
+```
+* Comando para remover volumes:
+```bash
+docker volume rm <volume_name>
+```
+* Comando para remover todos volumes não utilizados:
+```bash
+docker volume prune
+```
+
 ### Início do projeto
 * Comando para criar o banco de dados:
 ```bash
