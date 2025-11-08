@@ -14,6 +14,12 @@ bin/rails db:migrate
 bin/rails server
 ```
 
+### Gems
+* Comando para instalar gems:
+```bash
+bundle install
+```
+
 ### Migrações
 * Comando para criar uma nova migração:
 ```bash
