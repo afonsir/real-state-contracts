@@ -52,11 +52,11 @@ ActiveRecord::Schema[7.2].define(version: 2025_12_13_003242) do
 
   create_table "taxes", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "pre_index", limit: 10, null: false
-    t.integer "total_pre_interest_in_cents", null: false
+    t.decimal "total_pre_interest", precision: 3, scale: 5, null: false
     t.string "pos_index", limit: 10, null: false
-    t.integer "total_pos_interest_in_cents", null: false
-    t.integer "mora_interest_in_cents", null: false
-    t.integer "compensatory_fee_in_cents", null: false
+    t.decimal "total_pos_interest", precision: 3, scale: 5, null: false
+    t.decimal "mora_interest", precision: 3, scale: 5, null: false
+    t.decimal "compensatory_fee", precision: 3, scale: 5, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
