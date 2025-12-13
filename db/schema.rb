@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_12_13_000933) do
+ActiveRecord::Schema[7.2].define(version: 2025_12_13_003242) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -46,6 +46,17 @@ ActiveRecord::Schema[7.2].define(version: 2025_12_13_000933) do
     t.string "name", null: false
     t.string "document_number", limit: 14, null: false
     t.string "kind", limit: 4, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "taxes", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "pre_index", limit: 10, null: false
+    t.integer "total_pre_interest_in_cents", null: false
+    t.string "pos_index", limit: 10, null: false
+    t.integer "total_pos_interest_in_cents", null: false
+    t.integer "mora_interest_in_cents", null: false
+    t.integer "compensatory_fee_in_cents", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
