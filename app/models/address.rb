@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Address < ApplicationRecord
+  belongs_to :buyer
+
   validates :uf, presence: true
   validates :uf, length: { is: 2 }
 

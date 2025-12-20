@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Buyer < ApplicationRecord
+  has_one :address
+
   validates :name, presence: true
 
   validates :document_number, presence: true
